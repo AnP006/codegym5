@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Khảo sát thông tin cá nhân - Phần 1</title>
+    <style>
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background-color: #f4f6f9;
+            padding: 30px;
+            color: #333;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .btn-group {
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #1a73e8;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #1557b0;
+        }
+        input[type="reset"] {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        input[type="reset"]:hover {
+            background-color: #c7c7c7;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Khảo Sát Thông Tin</h2>
+        <form action="#" method="POST">
+            <!-- TextBox để nhập Họ và tên -->
+            <div class="form-group">
+                <label for="yourname">Họ và tên:</label>
+                <input type="text" id="yourname" name="yourname" placeholder="Nhập họ và tên của bạn" required>
+            </div>
+
+            <!-- TextBox để nhập Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <!-- Các CheckBox sở thích đặt cùng tên là hobby -->
+            <div class="form-group">
+                <label>Sở thích:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="hobby" value="reading"> Đọc sách</label>
+                    <label><input type="checkbox" name="hobby" value="gaming"> Chơi game</label>
+                    <label><input type="checkbox" name="hobby" value="sports"> Thể thao</label>
+                    <label><input type="checkbox" name="hobby" value="travel"> Du lịch</label>
+                </div>
+            </div>
+
+            <!-- Nút Submit và Reset -->
+            <div class="btn-group">
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
